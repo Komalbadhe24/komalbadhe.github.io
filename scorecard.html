@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Card</title>
+    <link rel="stylesheet" href="scorecard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Score Card</h1>
+        <div class="student-info">
+            <p><strong>Full Name:</strong> <span id="studentName"></span></p>
+            <p><strong>Roll Number:</strong> <span id="studentRoll"></span></p>
+            <p><strong>College Name:</strong> XYZ College</p>
+            <p><strong>University:</strong> ABC University</p>
+            <p><strong>Academic Year:</strong> 2023-2024</p>
+        </div>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Subject</th>
+                    <th>Maximum Marks</th>
+                    <th>Marks Obtained</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted dynamically -->
+            </tbody>
+        </table>
+        <p id="remarks"></p>
+    </div>
+    <script src="scorecard.js"></script>
+</body>
+</html>

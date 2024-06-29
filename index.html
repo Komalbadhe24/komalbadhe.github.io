@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Score Card</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color:Orange";>Student Score Card Generator</h1>
+      <form id="studentForm">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            pattern="[A-Za-z\s]{1,50}"
+            title="Only alphabets and spaces are allowed, up to 50 characters"
+          />
+        </div>
+        <div class="form-group">
+          <label for="rollNumber">Roll Number:</label>
+          <input
+            type="text"
+            id="rollNumber"
+            name="rollNumber"
+            required
+            pattern="[A-Z]{4}[0-9]{4}[A-Z]"
+            title="Format: ABCD1234E"
+          />
+        </div>
+        <div id="subjectsContainer">
+          <div class="subject-row">
+            <label>Subject:</label>
+            <input
+              type="text"
+              class="subject-name"
+              required
+              pattern="[A-Za-z\s]+"
+              title="Only alphabets allowed"
+            />
+            <label>Out of:</label>
+            <select
+              class="subject-outof"
+              required
+              onchange="updateMaxMarks(this)"
+            >
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+            <label>Obtained Marks:</label>
+            <input
+              type="number"
+              class="subject-marks"
+              required
+              min="0"
+              max="50"
+            />
+            <button
+              type="button"
+              class="remove-subject"
+              onclick="removeSubject(this)"
+            >
+              Remove Subject
+            </button>
+          </div>
+        </div>
+        <button type="button" onclick="addSubject()">Add more subject</button>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

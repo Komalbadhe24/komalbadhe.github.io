@@ -1,0 +1,21 @@
+.failed {
+    background-color: #ffcccc;
+}
+.student-info {
+    margin-bottom: 20px;
+}
+.student-info p {
+    margin: 5px 0;
+}
+#scoreTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#scoreTable th, #scoreTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#scoreTable th {
+    background-color: #f2f2f2;
+}

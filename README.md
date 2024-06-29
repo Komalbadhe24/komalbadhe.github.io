@@ -1,2 +1,2 @@
-# komalbadhe.github.io
-Website
+# Score_Card
+Score card using javascript
